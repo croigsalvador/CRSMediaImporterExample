@@ -14,6 +14,20 @@
 		0F307AE21AD1DDF400F75A6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F307AE11AD1DDF400F75A6F /* Images.xcassets */; };
 		0F307AE51AD1DDF400F75A6F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F307AE31AD1DDF400F75A6F /* LaunchScreen.xib */; };
 		0F307AF11AD1DDF400F75A6F /* CRSMediaImporterExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F307AF01AD1DDF400F75A6F /* CRSMediaImporterExampleTests.m */; };
+		0F307B521AD1DE2300F75A6F /* CRSMediaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F307B301AD1DE2300F75A6F /* CRSMediaController.m */; };
+		0F307B531AD1DE2300F75A6F /* CRSAssetsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F307B331AD1DE2300F75A6F /* CRSAssetsInteractor.m */; };
+		0F307B541AD1DE2300F75A6F /* CRSAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F307B361AD1DE2300F75A6F /* CRSAlbum.m */; };
+		0F307B551AD1DE2300F75A6F /* CRSGalleryNavigationMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F307B391AD1DE2300F75A6F /* CRSGalleryNavigationMediator.m */; };
+		0F307B561AD1DE2300F75A6F /* CRSAlbumsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F307B3C1AD1DE2300F75A6F /* CRSAlbumsViewModel.m */; };
+		0F307B571AD1DE2300F75A6F /* CRSAlbumViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F307B3E1AD1DE2300F75A6F /* CRSAlbumViewModel.m */; };
+		0F307B581AD1DE2300F75A6F /* CRSPictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F307B431AD1DE2300F75A6F /* CRSPictureCollectionViewCell.m */; };
+		0F307B591AD1DE2300F75A6F /* CRSPictureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F307B441AD1DE2300F75A6F /* CRSPictureCollectionViewCell.xib */; };
+		0F307B5A1AD1DE2300F75A6F /* CRSAlbumCollectionViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F307B461AD1DE2300F75A6F /* CRSAlbumCollectionViewManager.m */; };
+		0F307B5B1AD1DE2300F75A6F /* CRSAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F307B481AD1DE2300F75A6F /* CRSAlbumViewController.m */; };
+		0F307B5C1AD1DE2300F75A6F /* CRSAlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F307B491AD1DE2300F75A6F /* CRSAlbumViewController.xib */; };
+		0F307B5D1AD1DE2300F75A6F /* CRSAlbumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F307B4D1AD1DE2300F75A6F /* CRSAlbumTableViewCell.m */; };
+		0F307B5E1AD1DE2300F75A6F /* CRSAlbumsTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F307B4F1AD1DE2300F75A6F /* CRSAlbumsTableViewManager.m */; };
+		0F307B5F1AD1DE2300F75A6F /* CRSAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F307B511AD1DE2300F75A6F /* CRSAlbumsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +54,33 @@
 		0F307AEA1AD1DDF400F75A6F /* CRSMediaImporterExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CRSMediaImporterExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F307AEF1AD1DDF400F75A6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F307AF01AD1DDF400F75A6F /* CRSMediaImporterExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRSMediaImporterExampleTests.m; sourceTree = "<group>"; };
+		0F307B2E1AD1DE2300F75A6F /* CRSGalleryImporterTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSGalleryImporterTheme.h; sourceTree = "<group>"; };
+		0F307B2F1AD1DE2300F75A6F /* CRSMediaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSMediaController.h; sourceTree = "<group>"; };
+		0F307B301AD1DE2300F75A6F /* CRSMediaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSMediaController.m; sourceTree = "<group>"; };
+		0F307B321AD1DE2300F75A6F /* CRSAssetsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSAssetsInteractor.h; sourceTree = "<group>"; };
+		0F307B331AD1DE2300F75A6F /* CRSAssetsInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSAssetsInteractor.m; sourceTree = "<group>"; };
+		0F307B351AD1DE2300F75A6F /* CRSAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSAlbum.h; sourceTree = "<group>"; };
+		0F307B361AD1DE2300F75A6F /* CRSAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSAlbum.m; sourceTree = "<group>"; };
+		0F307B381AD1DE2300F75A6F /* CRSGalleryNavigationMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSGalleryNavigationMediator.h; sourceTree = "<group>"; };
+		0F307B391AD1DE2300F75A6F /* CRSGalleryNavigationMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSGalleryNavigationMediator.m; sourceTree = "<group>"; };
+		0F307B3B1AD1DE2300F75A6F /* CRSAlbumsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSAlbumsViewModel.h; sourceTree = "<group>"; };
+		0F307B3C1AD1DE2300F75A6F /* CRSAlbumsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSAlbumsViewModel.m; sourceTree = "<group>"; };
+		0F307B3D1AD1DE2300F75A6F /* CRSAlbumViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSAlbumViewModel.h; sourceTree = "<group>"; };
+		0F307B3E1AD1DE2300F75A6F /* CRSAlbumViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSAlbumViewModel.m; sourceTree = "<group>"; };
+		0F307B421AD1DE2300F75A6F /* CRSPictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSPictureCollectionViewCell.h; sourceTree = "<group>"; };
+		0F307B431AD1DE2300F75A6F /* CRSPictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSPictureCollectionViewCell.m; sourceTree = "<group>"; };
+		0F307B441AD1DE2300F75A6F /* CRSPictureCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CRSPictureCollectionViewCell.xib; sourceTree = "<group>"; };
+		0F307B451AD1DE2300F75A6F /* CRSAlbumCollectionViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSAlbumCollectionViewManager.h; sourceTree = "<group>"; };
+		0F307B461AD1DE2300F75A6F /* CRSAlbumCollectionViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSAlbumCollectionViewManager.m; sourceTree = "<group>"; };
+		0F307B471AD1DE2300F75A6F /* CRSAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSAlbumViewController.h; sourceTree = "<group>"; };
+		0F307B481AD1DE2300F75A6F /* CRSAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSAlbumViewController.m; sourceTree = "<group>"; };
+		0F307B491AD1DE2300F75A6F /* CRSAlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CRSAlbumViewController.xib; sourceTree = "<group>"; };
+		0F307B4C1AD1DE2300F75A6F /* CRSAlbumTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSAlbumTableViewCell.h; sourceTree = "<group>"; };
+		0F307B4D1AD1DE2300F75A6F /* CRSAlbumTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSAlbumTableViewCell.m; sourceTree = "<group>"; };
+		0F307B4E1AD1DE2300F75A6F /* CRSAlbumsTableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSAlbumsTableViewManager.h; sourceTree = "<group>"; };
+		0F307B4F1AD1DE2300F75A6F /* CRSAlbumsTableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSAlbumsTableViewManager.m; sourceTree = "<group>"; };
+		0F307B501AD1DE2300F75A6F /* CRSAlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSAlbumsViewController.h; sourceTree = "<group>"; };
+		0F307B511AD1DE2300F75A6F /* CRSAlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSAlbumsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +122,7 @@
 		0F307AD31AD1DDF400F75A6F /* CRSMediaImporterExample */ = {
 			isa = PBXGroup;
 			children = (
+				0F307B2D1AD1DE2300F75A6F /* MediaImporter */,
 				0F307AD81AD1DDF400F75A6F /* AppDelegate.h */,
 				0F307AD91AD1DDF400F75A6F /* AppDelegate.m */,
 				0F307ADB1AD1DDF400F75A6F /* ViewController.h */,
@@ -117,6 +159,112 @@
 				0F307AEF1AD1DDF400F75A6F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F307B2D1AD1DE2300F75A6F /* MediaImporter */ = {
+			isa = PBXGroup;
+			children = (
+				0F307B2E1AD1DE2300F75A6F /* CRSGalleryImporterTheme.h */,
+				0F307B2F1AD1DE2300F75A6F /* CRSMediaController.h */,
+				0F307B301AD1DE2300F75A6F /* CRSMediaController.m */,
+				0F307B311AD1DE2300F75A6F /* Interactor */,
+				0F307B341AD1DE2300F75A6F /* Model */,
+				0F307B371AD1DE2300F75A6F /* Navigation */,
+				0F307B3A1AD1DE2300F75A6F /* ViewModel */,
+				0F307B3F1AD1DE2300F75A6F /* Views */,
+			);
+			path = MediaImporter;
+			sourceTree = "<group>";
+		};
+		0F307B311AD1DE2300F75A6F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0F307B321AD1DE2300F75A6F /* CRSAssetsInteractor.h */,
+				0F307B331AD1DE2300F75A6F /* CRSAssetsInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0F307B341AD1DE2300F75A6F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F307B351AD1DE2300F75A6F /* CRSAlbum.h */,
+				0F307B361AD1DE2300F75A6F /* CRSAlbum.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F307B371AD1DE2300F75A6F /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0F307B381AD1DE2300F75A6F /* CRSGalleryNavigationMediator.h */,
+				0F307B391AD1DE2300F75A6F /* CRSGalleryNavigationMediator.m */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		0F307B3A1AD1DE2300F75A6F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F307B3B1AD1DE2300F75A6F /* CRSAlbumsViewModel.h */,
+				0F307B3C1AD1DE2300F75A6F /* CRSAlbumsViewModel.m */,
+				0F307B3D1AD1DE2300F75A6F /* CRSAlbumViewModel.h */,
+				0F307B3E1AD1DE2300F75A6F /* CRSAlbumViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0F307B3F1AD1DE2300F75A6F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0F307B401AD1DE2300F75A6F /* Album */,
+				0F307B4A1AD1DE2300F75A6F /* Albums */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0F307B401AD1DE2300F75A6F /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				0F307B411AD1DE2300F75A6F /* Cell */,
+				0F307B451AD1DE2300F75A6F /* CRSAlbumCollectionViewManager.h */,
+				0F307B461AD1DE2300F75A6F /* CRSAlbumCollectionViewManager.m */,
+				0F307B471AD1DE2300F75A6F /* CRSAlbumViewController.h */,
+				0F307B481AD1DE2300F75A6F /* CRSAlbumViewController.m */,
+				0F307B491AD1DE2300F75A6F /* CRSAlbumViewController.xib */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		0F307B411AD1DE2300F75A6F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0F307B421AD1DE2300F75A6F /* CRSPictureCollectionViewCell.h */,
+				0F307B431AD1DE2300F75A6F /* CRSPictureCollectionViewCell.m */,
+				0F307B441AD1DE2300F75A6F /* CRSPictureCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0F307B4A1AD1DE2300F75A6F /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				0F307B4B1AD1DE2300F75A6F /* Cell */,
+				0F307B4E1AD1DE2300F75A6F /* CRSAlbumsTableViewManager.h */,
+				0F307B4F1AD1DE2300F75A6F /* CRSAlbumsTableViewManager.m */,
+				0F307B501AD1DE2300F75A6F /* CRSAlbumsViewController.h */,
+				0F307B511AD1DE2300F75A6F /* CRSAlbumsViewController.m */,
+			);
+			path = Albums;
+			sourceTree = "<group>";
+		};
+		0F307B4B1AD1DE2300F75A6F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0F307B4C1AD1DE2300F75A6F /* CRSAlbumTableViewCell.h */,
+				0F307B4D1AD1DE2300F75A6F /* CRSAlbumTableViewCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +347,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F307B591AD1DE2300F75A6F /* CRSPictureCollectionViewCell.xib in Resources */,
 				0F307AE01AD1DDF400F75A6F /* Main.storyboard in Resources */,
+				0F307B5C1AD1DE2300F75A6F /* CRSAlbumViewController.xib in Resources */,
 				0F307AE51AD1DDF400F75A6F /* LaunchScreen.xib in Resources */,
 				0F307AE21AD1DDF400F75A6F /* Images.xcassets in Resources */,
 			);
@@ -219,9 +369,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F307B5D1AD1DE2300F75A6F /* CRSAlbumTableViewCell.m in Sources */,
 				0F307ADD1AD1DDF400F75A6F /* ViewController.m in Sources */,
+				0F307B5E1AD1DE2300F75A6F /* CRSAlbumsTableViewManager.m in Sources */,
 				0F307ADA1AD1DDF400F75A6F /* AppDelegate.m in Sources */,
+				0F307B5A1AD1DE2300F75A6F /* CRSAlbumCollectionViewManager.m in Sources */,
+				0F307B541AD1DE2300F75A6F /* CRSAlbum.m in Sources */,
 				0F307AD71AD1DDF400F75A6F /* main.m in Sources */,
+				0F307B521AD1DE2300F75A6F /* CRSMediaController.m in Sources */,
+				0F307B531AD1DE2300F75A6F /* CRSAssetsInteractor.m in Sources */,
+				0F307B5B1AD1DE2300F75A6F /* CRSAlbumViewController.m in Sources */,
+				0F307B5F1AD1DE2300F75A6F /* CRSAlbumsViewController.m in Sources */,
+				0F307B551AD1DE2300F75A6F /* CRSGalleryNavigationMediator.m in Sources */,
+				0F307B571AD1DE2300F75A6F /* CRSAlbumViewModel.m in Sources */,
+				0F307B581AD1DE2300F75A6F /* CRSPictureCollectionViewCell.m in Sources */,
+				0F307B561AD1DE2300F75A6F /* CRSAlbumsViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
