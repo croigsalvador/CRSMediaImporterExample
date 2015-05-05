@@ -14,10 +14,15 @@
 @property (copy, nonatomic, readonly) NSArray *assets;
 @property (assign, nonatomic, readonly) id posterImage;
 @property (assign, nonatomic, readonly) NSUInteger numberOfAssets;
+@property (copy, nonatomic, readonly) NSArray *selectedIndexs;
 
 - (instancetype)initWithTitle:(NSString *)title
                        assets:(NSArray *)assets
                   posterImage:(id)posterImage
                numberOfAssets:(NSInteger)numberOfAssets;
+
+- (void)addIndexToSelectedList:(NSUInteger)indexOfAsset;
+- (void)removeIndexFromSelectedList:(NSUInteger)indexOfAsset;
+- (NSArray *)selectedAssets;
 
 @end

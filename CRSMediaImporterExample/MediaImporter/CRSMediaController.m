@@ -14,6 +14,8 @@
 #import "CRSAlbumViewController.h"
 #import "CRSGalleryNavigationMediator.h"
 #import "CRSAlbum.h"
+#import "CRSGalleryViewController.h"
+#import "CRSGalleryViewModel.h"
 
 @interface CRSMediaController () <CRSAlbumsViewControllerDelegate, CRSAlbumViewControllerDelegate>
 
@@ -86,18 +88,19 @@
 
 - (void)presentGalleryViewController {
     
-    [self.assetsInteractor obtainAlbumsFromGalleryOfType:CRSAlbumsPictures inQueue:[NSOperationQueue mainQueue] withCompletion:^(NSArray *albums, NSError *error) {
-        
-        CRSAlbumsViewModel *viewModel = [[CRSAlbumsViewModel alloc] initWithAlbums:albums navigationTitle:@"Albums"];
-        
-        CRSAlbumsViewController *albumViewController = [[CRSAlbumsViewController alloc] initWithViewModel:viewModel theme:nil andDelegate:self];
-        
-        [self.galleryNavigation navigateFromViewController:self.rootViewController toViewController:[[UINavigationController alloc] initWithRootViewController:albumViewController] withNavigationType:CRSGalleryNavigationPresent];
-    }];
+    CRSGalleryViewModel *galleryViewModel = [[CRSGalleryViewModel alloc] initWithAssetsInteractor:self.assetsInteractor];
+    
+    CRSAlbumsViewController *albumViewController = [[CRSAlbumsViewController alloc] initWithViewModel:nil theme:nil andDelegate:self];
+    
+    CRSGalleryViewController *galleryViewController = [[CRSGalleryViewController alloc] initWithViewModel:galleryViewModel navAlbumsViewController:[[UINavigationController alloc] initWithRootViewController:albumViewController]];
+    
+    
+    [self.galleryNavigation navigateFromViewController:self.rootViewController toViewController:galleryViewController withNavigationType:CRSGalleryNavigationPresent];
+    
 }
 
 
-#pragma mark - CRSAlbumsViewControllerDelegate 
+#pragma mark - CRSAlbumsViewControllerDelegate
 
 - (void)albumsViewController:(CRSAlbumsViewController *)albumsViewController didSelectAlbumAtIndexWithViewModel:(CRSAlbumsViewModel *)viewModel {
     
@@ -107,7 +110,7 @@
     CRSAlbumViewController *albumViewController = [[CRSAlbumViewController alloc] initWithViewModel:albumViewModel theme:nil andDelegate:self];
     
     [self.galleryNavigation navigateFromViewController:albumsViewController toViewController:albumViewController withNavigationType:CRSGalleryNavigationPush];
- }
+}
 
 - (void)albumsViewControllerDidPressCancelButton:(CRSAlbumsViewController *)albumsViewController
                                    withViewModel:(CRSAlbumsViewModel *)viewModel
