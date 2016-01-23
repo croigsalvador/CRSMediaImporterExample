@@ -15,34 +15,20 @@
 @interface CRSAlbumViewController () <CRSAlbumCollectionViewManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (strong, nonatomic) CRSAlbumViewModel *viewModel;
+@property (strong, nonatomic) CRSAlbumViewModel *albumViewModel;
 @property (strong, nonatomic) id <CRSGalleryImporterTheme> theme;
 @property (strong, nonatomic) CRSAlbumCollectionViewManager *collectionDataSource;
-@property (weak, nonatomic) id delegate;
 
 @end
 
 @implementation CRSAlbumViewController
 
-#pragma mark - Initializers
-
-- (instancetype)initWithViewModel:(CRSAlbumViewModel *)viewModel
-                            theme:(id<CRSGalleryImporterTheme>)theme
-                      andDelegate:(id)delegate
-{
-    if (self = [super init]) {
-        _viewModel = viewModel;
-        _theme = theme;
-        _delegate = delegate;
-    }
-    return self;
-}
-
 #pragma mark - ViewController lifeCycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.viewModel.albumTitle;
+    self.albumViewModel = (CRSAlbumViewModel *)self.viewModel;
+    self.title = self.albumViewModel.albumTitle;
     [self setupCollectionView];
 }
 
@@ -58,18 +44,19 @@
     self.collectionView.allowsMultipleSelection = YES;
 }
 
+
 #pragma mark - CRSAlbumCollectionViewManagerDelegate 
 
 - (void)albumCollectionViewManager:(CRSAlbumCollectionViewManager *)albumCollectionViewManager albumCollectionViewCell:(CRSPictureCollectionViewCell *)cell atIndex:(NSUInteger)index {
-    cell.assetImage = [self.viewModel imageForAssetAtIndex:index];
+    cell.assetImage = [self.albumViewModel imageForAssetAtIndex:index];
 }
 
 - (void)albumCollectionViewManager:(CRSAlbumCollectionViewManager *)albumCollectionViewManager didSelectItemAtIndex:(NSUInteger)index {
-    [self.viewModel didSelectAssetAtIndex:index];
+    [self.albumViewModel didSelectAssetAtIndex:index];
 }
 
 - (void)albumCollectionViewManager:(CRSAlbumCollectionViewManager *)albumCollectionViewManager didDeselectItemAtIndex:(NSUInteger)index {
-    [self.viewModel didDeselectAssetAtIndex:index];
+    [self.albumViewModel didDeselectAssetAtIndex:index];
 }
 
 

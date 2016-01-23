@@ -14,16 +14,13 @@
 @interface CRSAlbumsTableViewManager : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 - (instancetype)initWithAlbumsViewModel:(CRSAlbumsViewModel *)viewModel
+                              tableView:(UITableView *)tableView
                          cellIdentifier:(NSString *)cellIdentifier
                             andDelegate:(id<CRSAlbumsTableViewManagerDelegate>)delegate;
 
 @end
 
 @protocol CRSAlbumsTableViewManagerDelegate <NSObject>
-
-- (void)albumsTableViewManager:(CRSAlbumsTableViewManager *)albumsTabelViewManager
-            albumTableViewCell:(UITableViewCell *)cell
-                       atIndex:(NSUInteger)index;
 
 - (void)albumsTableViewManager:(CRSAlbumsTableViewManager *)albumsTabelViewManager
           didSelectItemAtIndex:(NSUInteger)index;

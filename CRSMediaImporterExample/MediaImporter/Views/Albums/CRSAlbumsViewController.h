@@ -6,18 +6,14 @@
 //  Copyright (c) 2015 CRoigSalvador. All rights reserved.
 //
 
-#import "CRSGalleryImporterTheme.h"
-#import "CRSAlbumTableViewCell.h"
+#import "CRSBaseViewController.h"
 
 @protocol CRSAlbumsViewControllerDelegate;
 
 @class CRSAlbumsViewModel;
 
-@interface CRSAlbumsViewController : UIViewController
+@interface CRSAlbumsViewController : CRSBaseViewController
 
-- (instancetype)initWithViewModel:(CRSAlbumsViewModel *)viewModel
-                            theme:(id<CRSGalleryImporterTheme>)theme
-                      andDelegate:(id<CRSAlbumsViewControllerDelegate>)delegate;
 
 @end
 

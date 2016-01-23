@@ -6,19 +6,21 @@
 //  Copyright (c) 2015 CRoigSalvador. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "CRSViewModel.h"
+#import "CRSAssetsImporter.h"
 
-@class CRSAlbum;
+@class CRSAlbum, CRSAlbumViewModel;
 
-@interface CRSAlbumsViewModel : NSObject
+@interface CRSAlbumsViewModel : CRSViewModel
 
 @property (copy, nonatomic, readonly) NSString *navigationTitle;
 
-- (instancetype)initWithAlbums:(NSArray *)albums
-              navigationTitle:(NSString *)navigationTitle;
+- (instancetype)initWithAssetsImporter:(id<CRSAssetsImporter>)assetsImproter navigationTitle:(NSString *)navigationTitle;
+
+- (void)loadAlbumsWithMediaType:(CRSAlbumsType)mediaType completion:(void(^)())completion;
+- (CRSAlbum *)albumAtIndex:(NSUInteger)index;
 - (NSUInteger)numberOfAlbums;
 - (NSString *)titleForAlbumAtIndex:(NSUInteger)index;
-- (void)didSelectAlbumAtIndex:(NSUInteger)index;
-- (CRSAlbum *)selectedAlbum;
+- (CRSAlbumViewModel *)albumViewModelForItemAtIndex:(NSUInteger)index;
 
 @end

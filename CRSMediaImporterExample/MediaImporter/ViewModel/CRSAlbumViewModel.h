@@ -7,8 +7,9 @@
 //
 
 @import UIKit;
+#import "CRSViewModel.h"
 
-@interface CRSAlbumViewModel : NSObject
+@interface CRSAlbumViewModel : CRSViewModel
 
 @property (copy, nonatomic, readonly) NSString *albumTitle;
 

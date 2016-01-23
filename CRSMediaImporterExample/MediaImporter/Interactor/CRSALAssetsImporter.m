@@ -6,17 +6,17 @@
 //  Copyright (c) 2015 CRoigSalvador. All rights reserved.
 //
 
-#import "CRSAssetsInteractor.h"
+#import "CRSALAssetsImporter.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "CRSAlbum.h"
 
-@interface CRSAssetsInteractor ()
+@interface CRSALAssetsImporter ()
 
 @property (copy, nonatomic) NSArray *albums;
 
 @end
 
-@implementation CRSAssetsInteractor
+@implementation CRSALAssetsImporter
 
 - (ALAssetsLibrary *)defaultLibrary
 {
@@ -30,7 +30,7 @@
 
 - (void)obtainAlbumsFromGalleryOfType:(CRSAlbumsType)albumType
                               inQueue:(NSOperationQueue *)queue
-                       withCompletion:(CRSAssetsInteractorCompletion)completion {
+                       withCompletion:(CRSAssetsImporterCompletion)completion {
     
     ALAssetsLibrary *assetsLibrary = [self defaultLibrary];
     __block NSMutableArray *albums = [NSMutableArray array];
@@ -65,6 +65,5 @@
     });
 }
 
--
 
 @end

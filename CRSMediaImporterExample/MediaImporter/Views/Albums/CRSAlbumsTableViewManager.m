@@ -15,21 +15,35 @@
 @property (copy, nonatomic) NSArray *items;
 @property (copy, nonatomic) NSString *cellIdentifier;
 @property (weak, nonatomic) id <CRSAlbumsTableViewManagerDelegate> delegate;
+@property (strong, nonatomic) UITableView *tableView;
 
 @end
 
 @implementation CRSAlbumsTableViewManager
 
 - (instancetype)initWithAlbumsViewModel:(CRSAlbumsViewModel *)viewModel
+                              tableView:(UITableView *)tableView
                          cellIdentifier:(NSString *)cellIdentifier
                             andDelegate:(id<CRSAlbumsTableViewManagerDelegate>)delegate
 {
-    if (self = [super init]) {
+    if (self = [super init])
+    {
+        _tableView = tableView;
         _viewModel = viewModel;
         _cellIdentifier = cellIdentifier;
         _delegate = delegate;
+        [self setUpTableView];
     }
     return self;
+}
+
+- (void)setUpTableView {
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:self.cellIdentifier];
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    
+    [self.tableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -39,7 +53,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier forIndexPath:indexPath];
     
-    [self.delegate albumsTableViewManager:self albumTableViewCell:cell atIndex:indexPath.item];
+    cell.textLabel.text = [self.viewModel titleForAlbumAtIndex:indexPath.item];
     
     return cell;
 }
